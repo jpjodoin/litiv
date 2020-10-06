@@ -20,10 +20,10 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/ ${CMAKE_SOURCE_DIR}/cma
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-include(FrameworkUtils)
-include(GetGitRevisionDescription)
+#include(FrameworkUtils)
+#include(GetGitRevisionDescription)
 include(CheckFunctionExists) # should be pre-packaged with CMake...
-get_git_head_revision(GIT_REFSPEC GIT_SHA1)
+#get_git_head_revision(GIT_REFSPEC GIT_SHA1)
 set_property(GLOBAL PROPERTY USE_FOLDERS ON)
 #set(CMAKE_VERBOSE_MAKEFILE ON)
 set(EXTERNAL_DATA_ROOT "${CMAKE_SOURCE_DIR}/data/" CACHE PATH "External data root folder (this is where all datasets should be located for applications to find them automatically)")
@@ -78,7 +78,7 @@ option(USE_FAST_MATH "Enable fast math optimizations" OFF)
 mark_as_advanced(USE_FAST_MATH DATASETS_CACHE_SIZE)
 
 ### OPENCV CHECK
-find_package(OpenCV 3.0 REQUIRED)
+#find_package(OpenCV 2.0 REQUIRED)
 
 ### GLSL CHECK
 find_package(OpenGL)
